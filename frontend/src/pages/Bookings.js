@@ -16,7 +16,7 @@ function Bookings() {
       return;
     }
 
-    fetch("http://localhost:4003/bookings", {
+    fetch("https://hostel-management-suitability-engine-my7c.onrender.com/bookings", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -47,7 +47,7 @@ function Bookings() {
 
       const token = localStorage.getItem("token");
 
-      await fetch(`http://localhost:4003/bookings/${id}`, {
+      await fetch(`https://hostel-management-suitability-engine-my7c.onrender.com/bookings/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4003";
+const BASE_URL = "https://hostel-management-suitability-engine-my7c.onrender.com";
 
 export const getHostels = async (city = "") => {
   const url = city
@@ -19,7 +19,7 @@ export default getHostels;
 export const bookHostel = async (hostelId) => {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:4003/bookings", {
+  const res = await fetch(`${BASE_URL}/bookings`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export const bookHostel = async (hostelId) => {
 export const getRecommendedHostels = async () => {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:4003/hostels/recommended", {
+  const res = await fetch(`${BASE_URL}/hostels/recommended`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

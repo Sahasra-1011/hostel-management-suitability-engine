@@ -18,7 +18,7 @@ function Signup() {
     try {
       // 1️⃣ Register
       const registerRes = await fetch(
-        "http://localhost:4003/auth/register",
+        "https://hostel-management-suitability-engine-my7c.onrender.com/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -35,7 +35,7 @@ function Signup() {
       }
 
       // 2️⃣ Auto login after successful signup
-      const loginRes = await fetch("http://localhost:4003/auth/login", {
+      const loginRes = await fetch("https://hostel-management-suitability-engine-my7c.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

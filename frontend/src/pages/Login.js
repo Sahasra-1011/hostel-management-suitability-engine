@@ -15,7 +15,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:4003/auth/login", {
+      const res = await fetch("https://hostel-management-suitability-engine-my7c.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

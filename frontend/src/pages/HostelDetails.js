@@ -10,7 +10,7 @@ function HostelDetails() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4003/hostels/${id}`)
+    fetch(`https://hostel-management-suitability-engine-my7c.onrender.com/hostels/${id}`)
       .then((res) => res.json())
       .then((data) => setHostel(data));
   }, [id]);
